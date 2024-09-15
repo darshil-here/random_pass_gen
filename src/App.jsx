@@ -50,14 +50,14 @@ const PasswordGenerator = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-r from-slate-900 to-slate-700 font-spaceGrotesk font-normal flex flex-col items-center justify-center min-h-screen bg-gray-50">
-      {/* Header radio  */}
+    <div className="relative bg-gradient-to-r from-slate-900 to-slate-700 font-spaceGrotesk font-normal flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4 sm:px-6 lg:px-8">
+      {/* Header radio */}
       <h1 className="text-2xl font-light text-white mb-4 text-center">
         RANDOM PASSWORD GENERATOR
       </h1>
 
       {/* Password Display */}
-      <div className="flex items-center w-full max-w-md space-x-2 mb-4 bg-white p-4 rounded-lg shadow">
+      <div className="mx-6 flex items-center w-full max-w-md space-x-2 mb-4 bg-white p-4 rounded-lg shadow">
         <input
           type="text"
           value={password}
@@ -93,7 +93,7 @@ const PasswordGenerator = () => {
         />
 
         {/* Options */}
-        <div className="grid grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 mb-4">
           <label htmlFor="upperInput" className="flex items-center">
             <input
               defaultChecked={true}
@@ -148,7 +148,6 @@ const PasswordGenerator = () => {
         {/* Copy Button */}
         <button
           onClick={handleCopyPassword}
-          // Conditional Tailwind CSS classes based on button text
           className={`w-full py-2 rounded-md text-white 
       ${
         copyButtonText === "COPIED!"
@@ -160,10 +159,10 @@ const PasswordGenerator = () => {
         </button>
       </div>
 
-      <footer className="absolute bottom-7 text-sm text-white font-light mb-4 text-center">
+      <footer className="mx-6 absolute bottom-7 text-sm text-white font-light mb-4 text-center">
         made by{" "}
         <a
-          className="underline underline-offset-4" // Add underline-offset utility
+          className="underline underline-offset-4"
           href="https://github.com/darshil-here"
         >
           darshil
